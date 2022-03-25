@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<phpunit xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "vendor/phpunit/phpunit/phpunit.xsd" bootstrap="vendor/autoload.php">
+    <testsuite name="unit">
+        <directory>tests</directory>
+    </testsuite>
+    <extensions>
+        <extension class="MOJ\PHPUnit\MemoryUsageHook">
+            <arguments>
+                <integer>500000</integer>
+                <boolean>true</boolean>
+            </arguments>
+        </extension>
+    </extensions>
+</phpunit>

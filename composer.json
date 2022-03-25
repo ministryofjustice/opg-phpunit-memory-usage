@@ -1,0 +1,30 @@
+{
+  "name": "moj/phpunit-memory-usage",
+  "description": "Report high memory usage PHPUnit tests",
+  "version": "1.0.0",
+  "keywords": [
+    "PHPUnit",
+    "memory"
+  ],
+  "homepage": "https://github.com/ministryofjustice/phpunit-memory-usage",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ministry of Justice"
+    }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MOJ\\PHPUnit\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MOJ\\PHPUnit\\Tests\\": "tests/"
+    }
+  }
+}
