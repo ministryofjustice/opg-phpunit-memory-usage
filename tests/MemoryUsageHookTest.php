@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MOJ\PHPUnit\Tests;
+namespace MinistryOfJustice\PHPUnit\Tests;
 
 use PHPUnit\Framework\TestCase;
 

@@ -1,0 +1,23 @@
+name: Test
+
+on:
+    pull_request:
+        branches:
+            - main
+    push:
+        branches:
+            - main
+
+defaults:
+    run:
+        shell: bash
+
+jobs:
+    build-test:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - uses: php-actions/composer@v5
+            - run: cat composer.json
+            - run: ls src
+            - run: vendor/phpunit/phpunit/phpunit
