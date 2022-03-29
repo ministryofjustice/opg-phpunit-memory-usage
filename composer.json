@@ -1,5 +1,5 @@
 {
-  "name": "moj/phpunit-memory-usage",
+  "name": "ministryofjustice/phpunit-memory-usage",
   "description": "Report high memory usage PHPUnit tests",
   "version": "1.0.0",
   "keywords": [
@@ -19,12 +19,12 @@
   },
   "autoload": {
     "psr-4": {
-      "MOJ\\PHPUnit\\": "src/"
+      "MinistryOfJustice\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "MOJ\\PHPUnit\\Tests\\": "tests/"
+      "MinistryOfJustice\\PHPUnit\\Tests\\": "tests/"
     }
   }
 }

@@ -8,7 +8,7 @@ Add into the phpunit.xml extensions section
 
 ```xml
 <extensions>
-    <extension class="MOJ\PHPUnit\MemoryUsageHook"/>
+    <extension class="MinistryOfJustice\PHPUnit\MemoryUsageHook"/>
 </extensions>
 ```
 
@@ -16,11 +16,11 @@ There are optional arguments to set the maximum allowed memory threshold and whe
 
 ```xml
 <extensions>
-        <extension class="MOJ\PHPUnit\MemoryUsageHook">
-            <arguments>
-                <integer>500000</integer>
-                <boolean>true</boolean>
-            </arguments>
-        </extension>
-    </extensions>
+    <extension class="MinistryOfJustice\PHPUnit\MemoryUsageHook">
+        <arguments>
+            <integer>500000</integer>
+            <boolean>true</boolean>
+        </arguments>
+    </extension>
+</extensions>
 ```

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace MOJ\PHPUnit;
+namespace MinistryOfJustice\PHPUnit;
 
 use PHPUnit\Runner\AfterLastTestHook;
 use PHPUnit\Runner\AfterTestHook;
