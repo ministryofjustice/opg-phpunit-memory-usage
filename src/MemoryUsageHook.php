@@ -19,12 +19,6 @@ class MemoryUsageHook implements BeforeTestHook, AfterTestHook, AfterLastTestHoo
     ) {
     }
 
-    static function roundToStandardUnits($size): string
-    {
-        $unit=['B','KB','MB','GB'];
-        return round($size/pow(1024,($i=floor(log($size,1024)))),2) . ' ' . $unit[$i];
-    }
-
     public function executeBeforeTest(string $test): void
     {
         $this->previousUsage = memory_get_usage();
@@ -40,8 +34,8 @@ class MemoryUsageHook implements BeforeTestHook, AfterTestHook, AfterLastTestHoo
         }
 
         if ($this->displayRunningTotal) {
-            $currentString = self::roundToStandardUnits($currentUsage);
-            $differenceString = self::roundToStandardUnits($difference);
+            $currentString = MemoryStringFormatter::roundToStandardUnits($currentUsage);
+            $differenceString = MemoryStringFormatter::roundToStandardUnits($difference);
             print("Test '$test' ended. Current: $currentString, Difference: $differenceString\n");
         }
     }
@@ -59,7 +53,7 @@ class MemoryUsageHook implements BeforeTestHook, AfterTestHook, AfterLastTestHoo
         array_multisort($usageColumn, SORT_DESC, $this->results);
 
         foreach ($this->results as $result) {
-            $differenceString = self::roundToStandardUnits($result['usage']);
+            $differenceString = MemoryStringFormatter::roundToStandardUnits($result['usage']);
             print("Test '${result['name']}' used: $differenceString\n");
         }
     }
