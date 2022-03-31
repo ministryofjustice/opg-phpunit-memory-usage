@@ -1,7 +1,6 @@
 {
   "name": "ministryofjustice/phpunit-memory-usage",
   "description": "Report high memory usage PHPUnit tests",
-  "version": "1.0.0",
   "keywords": [
     "PHPUnit",
     "memory"
