@@ -7,7 +7,7 @@
         <directory>tests</directory>
     </testsuite>
     <extensions>
-        <extension class="MOJ\PHPUnit\MemoryUsageHook">
+        <extension class="MinistryOfJustice\PHPUnit\MemoryUsageHook">
             <arguments>
                 <integer>500000</integer>
                 <boolean>true</boolean>
