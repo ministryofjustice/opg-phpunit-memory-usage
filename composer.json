@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "MinistryOfJustice\\": "src/"
+      "MinistryOfJustice\\PHPUnit\\": "src/"
     }
   },
   "autoload-dev": {
