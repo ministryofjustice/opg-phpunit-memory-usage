@@ -17,7 +17,7 @@ class MemoryStringFormatterTest extends TestCase
         $this->assertEquals($expectedValue, MemoryStringFormatter::roundToStandardUnits($bytes));
     }
 
-    public function memoryProvider(): array
+    public static function memoryProvider(): array
     {
         return [
             '1 Byte' => ['1 B', 1],
